@@ -1,0 +1,107 @@
+.main {
+   background: url('../img/dist/main-bg1.webp') no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+   background-attachment: fixed;
+   position: relative;
+   z-index: 0;
+}
+
+.main::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.3);
+}
+
+.main-container {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.main-block {
+   position: relative;
+   z-index: 1;
+}
+
+.main-prolog {
+   position: relative;
+   font-size: 36px;
+   font-family: 'Montserrat', sans-serif;
+   text-transform: capitalize;
+   font-weight: 700;
+   line-height: 110%;
+   color: #ed1b24;
+   margin-bottom: 22px;
+}
+
+.main-title {
+   margin-bottom: 42px;
+   font-size: 60px;
+   line-height: 105%;
+   font-weight: 700;
+   color: #fff;
+   max-width: 900px;
+   text-transform: uppercase;
+}
+
+.button-group {
+   display: flex;
+   align-items: center;
+}
+
+.btn-large {
+   max-width: 190px;
+   width: 100%;
+   min-height: 50px;
+   text-transform: uppercase;
+   border: 2px solid transparent;
+}
+
+.btn-large:first-child {
+   margin-right: 30px;
+}
+
+.btn-large-req:hover {
+   background: transparent;
+   border: 2px solid white;
+   color: white;
+}
+
+.serv-btn {
+   border: 2px solid #ed1b24;
+   background: #ed1b24;
+   color: white;
+}
+
+.bg-transparent {
+   background: transparent;
+   border: 2px solid white;
+}
+
+@media all and (max-width: 1650px) {
+   .main { background-position-x: calc((100vw - 280px)/(100 - 280) * (50 - 75) + 75%); }
+}
+
+@media all and (max-width: 900px) {
+   .main-title { font-size: calc((100vw - 280px)/(900 - 280) * (60 - 40) + 40px); }
+}
+@media all and (max-width: 470px) {
+   .button-group { flex-direction: column; }
+   .btn-large:first-child { margin-right: 0; margin-bottom: 15px; }
+   .main-button { max-width: 100%; }
+}
+@media all and (max-width: 420px) {
+   .main-prolog { font-size: calc((100vw - 280px)/(420 - 280) * (36 - 28) + 28px); }
+   .main-container { min-height: 100%; }
+   .main { padding: 150px 0 120px 0; background-attachment: inherit; }
+}
+@media all and (max-width: 360px) {
+   .main-title { font-size: calc((100vw - 280px)/(360 - 280) * (40 - 36) + 36px); }
+}
+

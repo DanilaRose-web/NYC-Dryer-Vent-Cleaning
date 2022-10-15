@@ -1,0 +1,37 @@
+.contact {
+   background: url('../img/dist/contact-bg1.webp') no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+   background-attachment: fixed;
+}
+
+.contact-container {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.contact-block {
+   position: relative;
+   z-index: 2;
+}
+
+.contact-title {
+   margin: 0 auto;
+   margin-bottom: 20px;
+}
+
+#map {
+   height: 400px;
+   z-index: 0;
+}
+
+@media all and (max-width: 1000px) {
+   .contact { background-position-x: calc((100vw - 280px)/(1000 - 280) * (50 - 60) + 60%); }
+}
+@media all and (max-width: 420px) {
+   .contact-container { min-height: 100%; }
+   .contact { padding: 150px 0 120px 0; background-attachment: inherit; }
+   .contact-prolog { font-size: calc((100vw - 280px)/ (420 - 280) * (36 - 28) + 28px); }
+}

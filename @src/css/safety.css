@@ -1,0 +1,133 @@
+.safety {
+   background: url('../img/dist/safety/safety-bg1.webp') no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+   background-attachment: fixed;
+   position: relative;
+   z-index: 0;
+}
+
+.safety::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.3);
+}
+
+.safety-container {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.safety-block {
+   position: relative;
+   z-index: 1;
+}
+
+.safety-prolog {
+   margin-bottom: 20px;
+   text-align: center;
+   position: relative;
+   font-size: 33px;
+   text-transform: capitalize;
+   font-weight: 700;
+   line-height: 110%;
+   color: #fff;
+   
+}
+
+.safety-title {
+   text-align: center;
+   margin-bottom: 42px;
+   font-size: 60px;
+   line-height: 110%;
+   font-weight: 700;
+   color: #fff;
+   max-width: 540px;
+   text-transform: uppercase;
+}
+
+.safety-section-title {
+   margin-bottom: 60px;
+}
+
+.prevent-fires {
+   padding: 110px 0;
+}
+
+.prevent-fires.pb-0 {
+   padding-bottom: 0;
+}
+
+.safety-title strong {
+   color: #ed1b24;
+}
+
+.button-group-center {
+   justify-content: center;
+}
+
+@media all and (max-width: 1450px) {
+   .safety { background-position-x: calc((100vw - 280px)/(100 - 280) * (50 - 40) + 40%); }
+}
+
+@media all and (max-width: 600px) {
+   .safety-title { font-size: calc((100vw - 280px)/(600 - 280) * (60 - 40) + 40px); }
+}
+@media all and (max-width: 420px) {
+   .safety-container { min-height: 100%; }
+   .safety { padding: 150px 0 120px 0; background-attachment: inherit; }
+   .safety-prolog { font-size: calc((100vw - 280px)/ (420 - 280) * (36 - 28) + 28px); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* section prevent-fires */
+.info-block {
+   margin-bottom: 30px;
+}
+
+.info-text {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 140%;
+   color: #232323;
+   max-width: 1100px;
+}
+
+.info-text strong {
+   font-weight: 700;
+   color: black;
+}
+
+.info-text a {
+   color: #ed1b24;
+   font-weight: 600;
+   transition: all 0.2s ease;
+}
+.info-text a:hover {
+   color: black;
+}
+
+.ta-left {
+   margin: 0;
+   text-align: left;
+   font-weight: 700;
+}

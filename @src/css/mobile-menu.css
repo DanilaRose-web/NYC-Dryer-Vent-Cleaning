@@ -1,0 +1,226 @@
+.mobile-menu {
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    -webkit-transform: translateX(400px);
+    transform: translateX(400px);
+    -webkit-transition: all 1s cubic-bezier(.16,.68,.18,1);
+    transition: all 1s cubic-bezier(.16,.68,.18,1);
+}
+
+.mobile-menu.active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all 1s cubic-bezier(.16,.68,.18,1);
+    transition: all 1s cubic-bezier(.16,.68,.18,1);
+}
+
+#mobile-menu {
+    margin: 80px 20px 80px 0;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.mobile-list {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mobile-list > li  {
+    width: 100%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+.mobile-list > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.mobile-list > li > a {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all 0.4s ease;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.mobile-list > li > a:hover {
+    color: #ed1b24;
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+.mobile-list > li > a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: #ed1b24;
+    height: 2px;
+    width: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.mobile-list > li.active > a {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    color: #ed1b24;
+}
+.mobile-list > li > a:hover:after, .mobile-list > li.active > a::after{
+    width: 100%;
+}
+
+.mobile-list__1 {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.mobile-list__1 > li {
+    margin-left: 10px;
+    padding: 0 10px 0 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    color: #323232;
+    width: 100%;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.mobile-list__1 li > a {
+    font-weight: 500;
+    color: #192835e5;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+}
+
+.mobile-list__1 li:hover > a {
+    color: #ed1b24;
+}
+
+
+.mobile-list__1 li > a:hover {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+
+/* стрелка аккордиона в мобильном меню */
+.mobile-list-item.has-children {
+    position: relative;
+}
+
+.mobile-list-item.has-children::after,
+.mobile-list-item.has-children::before {
+    content: '';
+    width: 7px;
+    height: 1px;
+    background-color: #323232;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.mobile-list-item.has-children::before {
+    transform: rotate(40deg);
+    right: 5px;
+}
+.mobile-list-item.has-children::after {
+    transform: rotate(-40deg);
+    right: 0;
+}
+.mobile-list-item.has-children.active::before {
+    transform: rotate(-40deg);
+    background-color: #323232;
+}
+.mobile-list-item.has-children.active::after {
+    transform: rotate(40deg);
+    background-color: #323232;
+}
+
+
+
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+    -webkit-transition: all 1s cubic-bezier(.16,.68,.18,1);
+    transition: all 1s cubic-bezier(.16,.68,.18,1);
+    z-index: 3;
+}
+
+.overlay.show {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    visibility: visible;
+    -webkit-transition: all 1s cubic-bezier(.16,.68,.18,1);
+    transition: all 1s cubic-bezier(.16,.68,.18,1);
+}
+
+
+.close-menu {
+    width: 30px;
+    height: 29px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.close-menu:active,
+.close-menu:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content= />
+        <meta name="author" content= />
+        <!-- <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/hover-min.css"> -->
+        <link rel="stylesheet" href="lib/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="lib/reset.css">
+        <link rel="stylesheet" href="lib/slick/slick.css">
+        <link rel="stylesheet" href="lib/slick/slick-theme.css">
+        <link rel="stylesheet" href="lib/fonts.css">
+        <link rel="stylesheet" href="lib/lightbox.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <link rel="stylesheet" href="css/style.min.css">
+        <title></title>
+    </head>
+    <body>
+
+
+        <div class="fullpage">
+            @@include('_header.html')
+
+            <section class="error">
+                <div class="container-fluid error-container">
+                    <div class="main-block">
+                        <div class="section-pretitle">Oops...</div>
+                        <h1 class="main-title error-title">404</h1>
+                        <div class="main-prolog error-prolog">Page not found</div>
+
+                        <div class="button-group button-group-center">
+                            <a href="#" onclick="history.back();" class="main-btn btn-large mr0">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="request">
+               <div class="container-fluid request-container">
+                   <div class="section-pretitle">Request</div>
+                   <h2 class="section-title light-title">have any questions?</h2>
+                   <h3 class="section-subtitle light-subtitle">If you want to make an appointment, order a service or ask a question - fill out the form below</h3>
+               </div>
+               <div class="form-request">
+                   <div class="container-fluid form-request-container">
+                       @@include('_form-request.html')
+                   </div>
+               </div>
+           </section>
+
+            @@include('_footer.html')
+        <div class="arrow-up">
+            <svg><use xlink:href="img/dist/svg-sprite.svg#breadcrumbs-arrow"></use></svg>
+        </div>
+
+        @@include('_mobile-menu.html')
+        @@include('_popup.html')
+        <div class="overlay"></div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <!-- <script src="lib/jQuery-1.12.4.min.js"></script> -->
+        <script src="lib/slick/slick.min.js"></script>
+        <script type="text/javascript" src="lib/jquery.spincrement.min.js"></script>
+        <script src="lib/counter.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        <script src="lib/masonry.min.js"></script>
+        <script src="https://unpkg.com/imask"></script>
+        <script src="lib/lightbox.js"></script>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>

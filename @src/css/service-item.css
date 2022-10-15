@@ -1,0 +1,52 @@
+.services-item {
+   background: url('../img/dist/service-bg.webp') no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+}
+
+.service-content {
+   margin-bottom: 110px;
+}
+
+.service-item-container {
+   padding: 400px 0 200px 0;
+   min-height: 100%;
+}
+
+.services-item-block {
+   position: relative;
+   z-index: 2;
+}
+
+
+
+.servce-item-row {
+   margin-top: 30px;
+   display: flex;
+   justify-content: center;
+}
+
+.work-wrap {
+   display: flex;
+}
+
+.work-wrap img {
+   max-width: 100%;
+   height: auto;
+   opacity: 1;
+   transition: all 0.3s ease;
+}
+
+.serv-item-col {
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+}
+
+@media all and (max-width: 960px) {
+   .service-item-container { padding: 250px 0 150px 0; }
+}
+
+@media all and (max-width: 600px) {
+   .service-item-container { padding: 0; padding-bottom: 100px; padding-top: calc((100vw - 280px)/(600 - 280) * (250 - 100) + 100px);}
+}

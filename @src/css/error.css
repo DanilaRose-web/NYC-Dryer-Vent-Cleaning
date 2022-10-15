@@ -1,0 +1,36 @@
+.error-container {
+   padding-top: 250px;
+   min-height: 80vh;
+   display: flex;
+   justify-content: center;
+}
+
+.error-title {
+   margin-bottom: 20px;
+   font-size: 170px;
+   color: #000;
+   text-align: center;
+}
+
+.error-prolog {
+   text-align: center;
+}
+
+.error .mr0 {
+   margin-right: 0;
+}
+
+.error-link {
+   margin: 0 auto;
+   padding: 15px 0;
+   color: #ed1b24;
+   font-size: 15px;
+   font-weight: 600;
+   display: block;
+   text-align: center;
+}
+
+@media all and (max-width: 450px) {
+   .error-container { padding-top: 150px; min-height: 66vh; }
+   .error-title { font-size: calc((100vw - 280px)/(450 - 280) * (170 - 105) + 105px); }
+}

@@ -1,0 +1,320 @@
+.request {
+   padding: 110px 0 70px 0;
+   background: url('../img/dist/footer-bg.png') no-repeat center;
+   background-size: cover;
+}
+
+.request-form {
+   margin: 50px auto;
+   max-width: 1050px;
+}
+
+.form-request-container {
+   padding-bottom: 40px;
+   border-bottom: 1px solid #ffffff48;
+}
+
+.form-col {
+   margin-bottom: 30px;
+}
+
+.request-block {
+   display: flex;
+   align-items: center;
+}
+
+.input, textarea {
+   padding: 0 20px;
+   position: relative;
+   width: 320px;
+   min-height: 55px;
+   border-radius: 50px;
+   background: #343c3b;
+   display: flex;
+   align-items: center;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 15px;
+   color: #fff;
+   border: 1px solid transparent;
+   margin-right: 16px;
+   transition: all 0.5s ease;
+}
+
+textarea.input {
+   padding: 15px 20px;
+   min-height: 100px;
+   border-radius: 25px;
+}
+
+.input:focus {
+   border: 1px solid #ed1b24;
+}
+
+.input.w100 {
+   max-width: 100%;
+   width: 100%;
+}
+
+.input.error {
+   border: 1px solid #ed1b24;
+   color: #ed1b24;
+   box-shadow: 0 0 15px #ed1b24;
+}
+
+.input.success {
+   border: 1px solid green;
+   color: green;
+   box-shadow: 0 0 15px green;
+}
+
+.submit.mb {
+   margin-bottom: 20px;
+   margin-left: 0;
+}
+
+.wpcf7-form.init p, .wpcf7-form.sent p, .wpcf7-form.invalid p {
+   display: flex;
+   justify-content: center;
+}
+
+form[action="/vacancies/#wpcf7-f213-o1"].wpcf7-form.init p, 
+form[action="/vacancies/#wpcf7-f213-o1"].wpcf7-form.sent p, 
+form[action="/vacancies/#wpcf7-f213-o1"].wpcf7-form.invalid p {
+   display: flex;
+   justify-content: flex-start;
+}
+
+.wpcf7 form .wpcf7-response-output {
+   margin: 10px auto 10px auto;
+   padding: 0;
+   border: 2px solid #00a0d2;
+   max-width: 630px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+   color: #f3c600;
+   border: none;
+}
+
+.wpcf7-not-valid-tip {
+   color: #ed1b24;
+   font-size: 13px;
+   font-weight: normal;
+   display: block;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   margin-top: 5px;
+}
+
+form .form-control .main-btn:hover {
+   background: transparent;
+   color: #ed1b24;
+   border: 1px solid #ed1b24;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+   color: #ed1b24;
+}
+
+span.wpcf7-list-item-label {
+   margin-left: 10px;
+   font-weight: 500;
+   color: white;
+   font-size: 16px;
+   display: inline-block;
+   cursor: pointer;
+}
+
+
+
+
+
+
+.form-control {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+/* checkbox */
+
+.c-custom-checkbox {
+   position: relative;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   width: max-content;
+}
+
+.c-custom-checkbox span {
+   margin-left: 15px;
+   margin-left: 10px;
+   font-weight: 500;
+   color: white;
+   font-size: 16px;
+   display: inline-block;
+   ;
+   cursor: pointer;
+}
+
+/* Убираем стандартный input, делая его прозрачным и убираем из основного потока, 
+   оставляя также возможность реагирования пользователя с ним. display: none и visibility: hidden не подходят, так как они убирают
+   возможность польователя взаимодействовать с элементом */
+.c-custom-checkbox input[type=checkbox] {
+   margin: 0;
+   position: absolute;
+   opacity: 0;
+   width: 25px;
+   height: 25px;
+}
+
+/* визуально показать контур фокуса, когда SVG получает фокус */
+.c-custom-checkbox input[type="checkbox"]:focus + svg {
+   /* outline: 3px solid #E55360;
+   outline-offset: 3px; */
+}
+
+/* скрыть стили фокуса для пользователей мыши - обратная реакция */
+.c-custom-checkbox input[type="checkbox"]:focus:not(:focus-visible) + svg {
+   outline: none;
+}
+
+.c-custom-checkbox svg {
+ width: 25px;
+ height: 25px;
+}
+
+* {
+transition: all 0.1s linear;
+}
+
+/* style changes inside the svg when the checkbox is checked */
+/* Для c-custom-checkbox нахожу дочерний элемент .checkbox__bg, который лежит в svg, который является дочерним к c-custom-checkbox и, который стоит после input  */
+.c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__bg {
+   fill: red;
+   stroke: red;
+}
+
+.c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__checkmark {
+   stroke: white;
+}
+
+
+/* оптимизация для режима высокой контрастности Windows */
+.c-custom-checkbox svg {
+ @media screen and (-ms-high-contrast: active) {
+   .checkbox__bg {
+     stroke: windowText;
+   }
+ }
+}
+
+@media screen and (-ms-high-contrast: active) {
+   .c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__bg {
+       fill: windowText;
+   }
+
+   .c-custom-checkbox input[type="checkbox"]:checked + svg .checkbox__checkmark {
+       stroke: highlight;
+   }
+}
+
+
+
+
+
+
+
+
+
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #fff;
+   opacity: 1; /* Firefox */
+}
+:-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #fff;
+   opacity: 1; /* Firefox */
+}
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #fff;
+   opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #fff;
+   opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #fff;
+   opacity: 1; /* Firefox */
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #fff;
+   opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #fff;
+}
+
+
+
+
+
+.form-item.error ::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #B10444;
+   opacity: 1; /* Firefox */
+}
+.form-item.error :-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #B10444;
+   opacity: 1; /* Firefox */
+}
+.form-item.error ::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #B10444;
+   opacity: 1; /* Firefox */
+}
+.form-item.error :-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #B10444;
+   opacity: 1; /* Firefox */
+}
+.form-item.error ::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #B10444;
+   opacity: 1; /* Firefox */
+}
+.form-item.error ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #B10444;
+   opacity: 1; /* Firefox */
+}
+.form-item.error :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #B10444;
+}
+.form-item.error ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #B10444;
+}
+
+
+
+@media all and (max-width: 640px) {
+   .form-req-title { font-size: calc((100vw - 280px)/(640 - 280) * (49 - 33) + 33px); }
+}
+
+@media all and (max-width: 570px) {
+   .wpcf7-form.init p, .wpcf7-form.sent p, .wpcf7-form.invalid p, .form-request { flex-direction: column; align-items: center; }
+   .form-req-btn { margin-left: 0; max-width: 100%; width: 100%; }
+   .wpcf7-form-control-wrap, .input { max-width: 100%; width: 100%; }
+}
+@media all and (max-width: 550px) {
+   .form-control { flex-direction: column; align-items: flex-start; }
+   .form-item.flex { margin-top: 20px; }
+}
+@media all and (max-width: 531px) {
+   .form-req-title { margin-bottom: 30px; }
+}
+
+@media all and (max-width: 400px) {
+   .form-req-subtitle { font-size: calc((100vw - 280px)/(400 - 280) * (18 - 16) + 16px); }
+}
+
+@media all and (max-width: 360px) {
+   .c-custom-checkbox span { font-size: 14px; }
+}
